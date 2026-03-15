@@ -1,0 +1,32 @@
+# Видео и медиафайлы
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.webm
+*.gif
+*.png
+
+# Выходные папки
+*_gifs/
+output/
+
+# Docker артефакты
+*.tar
+*.tar.gz
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+
+# Прочие файлы проекта не для репо
+some.py
+video_to_gifs.py

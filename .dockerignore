@@ -1,0 +1,7 @@
+test_video.mp4
+*_gifs/
+*.gif
+some.py
+video_to_gifs.py
+__pycache__/
+*.pyc
