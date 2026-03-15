@@ -9,26 +9,16 @@
 
 ### Установка ffmpeg
 
-**Arch Linux:**
-```bash
-sudo pacman -S ffmpeg
-```
-
 **Ubuntu / Debian:**
 ```bash
 sudo apt install ffmpeg
-```
-
-**macOS:**
-```bash
-brew install ffmpeg
 ```
 
 **Windows:** скачать с [ffmpeg.org](https://ffmpeg.org/download.html) и добавить в PATH.
 
 ---
 
-## Запуск
+## Запуск Ubuntu CLI
 
 ```
 python gif_extractor.py <видео> -s <сегменты> [опции]
@@ -79,7 +69,6 @@ python gif_extractor.py <видео> -s <сегменты> [опции]
 0:5      с 0 сек, длительность 5 сек
 15:8     с 15 сек, длительность 8 сек
 ```
-
 ---
 
 ## Примеры
@@ -125,7 +114,6 @@ python gif_extractor.py video.mp4 -s 00:05:00-00:05:08 00:30:00@10s -w 480 -f 15
 
 Готово! 3 GIF сохранены в video_gifs/
 ```
-
 ---
 
 ## Запуск через Docker
@@ -134,23 +122,17 @@ python gif_extractor.py video.mp4 -s 00:05:00-00:05:08 00:30:00@10s -w 480 -f 15
 
 ```bash
 docker build -t video-to-gifs .
-```
-
-### Linux / macOS
-
-```bash
 docker run --rm -v "/path/to/videos:/data" video-to-gifs /data/video.mp4 -s 00:15:10-01:05:11
 docker run --rm -v "/path/to/videos:/data" video-to-gifs /data/video.mp4 -s 00:45:00@1m30s 01:20:00@2m
 ```
 
 ### Windows (PowerShell)
-
 ```powershell
 docker run --rm -v "C:\Users\user\Videos:/data" video-to-gifs /data/video.mp4 -s 00:15:10-01:05:11
 docker run --rm -v "C:\Users\user\Videos:/data" video-to-gifs /data/video.mp4 -s 00:45:00@1m30s 01:20:00@2m
 ```
 
-**Пример запуск под виндой**
+**Пример запуск под windows**
 `docker run --rm -v "${PWD}:/data" video-to-gifs /data/deep_dive_llm.mp4 -s 00:00:10-00:00:20 00:00:20@1m10s`
 
 
@@ -164,5 +146,4 @@ docker save -o video-to-gifs.tar video-to-gifs
 # Загрузить образ из файла (на Windows)
 docker load -i video-to-gifs.tar
 ```
-
 GIF-файлы появятся в смонтированной папке в директории `video_gifs/`.
