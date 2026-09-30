@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gif-extractor"
+version = "0.2.0"
+description = "Генератор множественных GIF из видео (ffmpeg, двухпроходная палитра)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+gif-extractor = "gif_extractor.cli:main"
+
+[tool.setuptools]
+packages = ["gif_extractor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

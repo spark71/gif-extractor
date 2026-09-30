@@ -1,7 +1,14 @@
-test_video.mp4
-*_gifs/
+# Видео, артефакты и лишнее — в образ не копируем
+*.mp4
 *.gif
+*.png
+*.tar
+*.tar.gz
+*_gifs/
+output/
+bench/
+tests/
+.venv/
+.git/
 some.py
 video_to_gifs.py
-__pycache__/
-*.pyc

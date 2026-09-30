@@ -11,9 +11,19 @@
 *_gifs/
 output/
 
+# Локальные файлы (планы, бенчмарки) — в репозиторий не коммитятся
+UPGRADE.md
+bench/
+
+# Тесты и golden-эталоны — локально, в репозиторий не коммитятся
+tests/
+
 # Docker артефакты
 *.tar
 *.tar.gz
+
+# Архивы для передачи
+*.zip
 
 # Python
 __pycache__/
@@ -25,8 +35,3 @@ venv/
 *.egg-info/
 dist/
 build/
-
-
-# Прочие файлы проекта не для репо
-some.py
-video_to_gifs.py

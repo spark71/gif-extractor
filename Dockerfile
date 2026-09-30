@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
-COPY gif_extractor.py .
+COPY pyproject.toml README.md ./
+COPY gif_extractor/ gif_extractor/
+RUN pip install --no-cache-dir .
 
-ENTRYPOINT ["python", "gif_extractor.py"]
+ENTRYPOINT ["gif-extractor"]
